@@ -1,0 +1,49 @@
+v 1.2 16/06/2018
+	Ajustando o algoritimo de validação de CPF/CNPJ, para no garb identificar quando o documento é "CPF" ou "CNPJ";
+	Nova formatação na Classe Validacpfcnpj zeroEsquerda;
+	Criação de um espelho de dados em excel;
+	Criação de uma listagem mostrando os CPF e CNPJ invalidos no sistema de cursos;
+	Retirando a falha opção de deletar boleto;
+	Adicionando a opção de retirar o boleto para geração de Remessa;
+	Adicionando a opção de adicionar o boleto para geração de Remessa, somente se o CPF/CNPJ estiver corrigido;
+		modified:   cursos/application/config/constants.php
+		modified:   cursos/application/config/routes.php
+		modified:   cursos/application/controllers/Boleto_controller.php
+		modified:   cursos/application/controllers/Cnab_controller.php
+		modified:   cursos/application/libraries/Validacpfcnpj.php
+		modified:   cursos/application/views/cnab/geraremessa.php
+		modified:   cursos/application/views/layouts/main.php
+V 1.3 17/06/2018
+	Padronizando todas as chamadas dos models;
+		Boleto_Model => boletos
+		Alunos_model => alunos
+		Remessa_model => remessas
+	Limpando as telas de alunos, pois os dados dos boletos são gerados pelo sistema "Abraco - Cursos";
+	Ajuste no nome do arquivo de criação adicionando o ano da geração;
+	Retirando o arquivo Mensagem_Model
+	Retirando o arquivo MossoNumero_Model
+
+		modified:   cursos/application/config/autoload.php
+		modified:   cursos/application/config/constants.php
+		modified:   cursos/application/config/routes.php
+		modified:   cursos/application/controllers/Alunos_controller.php
+		modified:   cursos/application/controllers/Boleto_controller.php
+		modified:   cursos/application/controllers/Cnab_controller.php
+		modified:   cursos/application/models/Alunos_model.php
+		modified:   cursos/application/models/Mensagem_model.php
+		modified:   cursos/application/models/Nosso_numero_model.php
+		modified:   cursos/application/models/Remessa_model.php
+		deleted:    cursos/application/views/alunos/addBoleto.php
+		deleted:    cursos/application/views/alunos/index.php
+		deleted:    cursos/application/views/boleto/add.php
+		modified:   cursos/application/views/boleto/dataTables.php
+		deleted:    cursos/application/views/boleto/edit.php
+		deleted:    cursos/application/views/boleto/findAluno.php
+		deleted:    cursos/application/views/boleto/include/dadosBoleto.php
+		deleted:    cursos/application/views/boleto/include/demonstrativo.php
+		deleted:    cursos/application/views/boleto/include/instrucoes.php
+		deleted:    cursos/application/views/boleto/include/sacado.php
+		modified:   cursos/application/views/cnab/geraremessa.php
+		modified:   cursos/application/views/layouts/main.php
+		deleted:    cursos/application/models/Mensagem_model.php
+        deleted:    cursos/application/models/Nosso_numero_model.php

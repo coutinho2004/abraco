@@ -1,0 +1,45 @@
+v 1.0: 24/05/2018
+	Implementação da função, quando o usuário clicar em visualizar o boleto, abrir a opção de impressão automaticamente - (layout_bradesco.php);
+	Adição da edição do boleto boleto/edt.php;
+	Adição do botão voltar na tela de adição e edição do boleto;
+	Adição da rota boleto/datatables, para ser o futuro index de boletos, sendo pesquisado "Nome, CPF e Número do Pedido";
+	Adição da mascara monetárea para evitar de cadastrar "," no lugar de "." para o valor decimal;
+	Adição de Login;
+
+v 1.1: 29/05/2018
+	Atendendo a solicitação do Ednilton para trocar o campo "Dias de Prazo para Pagamento", para "Data de Vencimento";
+	Retirada do arquivo demo.js;
+v 1.2 07/06/2018
+	Atendendo a solicitação do financeiro adição do e-mail no boleto;
+	Anteração na nomeclatura do arquivo remessa para não coincidir com os arquivos gerados no próximo ano,
+	Ex: CB07061801.REM
+		modified:   certificacao/$db/cnab_abraco.sql
+		modified:   certificacao/$db/versoes.txt
+		modified:   certificacao/application/controllers/Boleto_controller.php
+		modified:   certificacao/application/controllers/Dashboard.php
+		modified:   certificacao/application/libraries/Boleto.php
+		modified:   certificacao/application/libraries/boleto/boleto_bradesco.php
+		modified:   certificacao/application/models/Alunos_model.php
+		modified:   certificacao/application/models/Remessa_model.php
+		modified:   certificacao/application/views/boleto/edit.php
+		modified:   certificacao/application/views/boleto/include/sacado.php
+v 1.3 16/06/2018
+	Ajustando o algoritimo de validação de CPF/CNPJ, para no garb identificar quando o documento é "CPF" ou "CNPJ";
+	Nova formatação na Classe Validacpfcnpj zeroEsquerda;
+	Criação de um novo botão para geração de boletos para empresas;
+	Criação de um espelho de dados em excel;
+	    modified:   certificacao/application/config/constants.php
+        modified:   certificacao/application/views/cnab/listaRemessa.php
+    Padronizando as chamadas dos Models
+    	'Boleto_model'=>'boletos',
+		'Alunos_model'=>'alunos',
+		'Mensagem_model'=>'message',
+		'Nosso_numero_model'=>'nossoNumero',
+		'Remessa_model'=>'remessas'
+
+    modified:   certificacao/application/config/autoload.php
+    modified:   certificacao/application/config/constants.php
+    modified:   certificacao/application/controllers/Alunos_controller.php
+    modified:   certificacao/application/controllers/Boleto_controller.php
+    modified:   certificacao/application/controllers/Cnab_controller.php
+    modified:   certificacao/application/models/Remessa_model.php
